@@ -8,7 +8,7 @@ const source = fs.readFileSync(inboxPath, 'utf8');
 
 var inbox_contract = solc.compile(source, 1).contracts[':Inbox'];
 
-console.log(inbox_contract);
+// console.log(inbox_contract);
 
 export let _interface = inbox_contract.interface;
 export let _bytecode = inbox_contract.bytecode
