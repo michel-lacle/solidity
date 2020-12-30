@@ -32,4 +32,12 @@ describe('Inbox', () => {
 
         assert.strictEqual(message, 'Hi There!')
     });
+
+    it('can change this message', async () => {
+        await inbox.methods.setMessage('bye').send({ from: accounts[0], gas: '1000000'});
+
+        const message = await inbox.methods.message().call();
+
+        assert.strictEqual(message, 'bye');
+    });
 });
