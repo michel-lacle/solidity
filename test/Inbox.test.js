@@ -4,7 +4,7 @@ import Web3 from 'web3';
 
 const provider = ganache.provider();
 const web3 = new Web3(provider);
-import { _interface, _bytecode } from '../compile.js'
+import { _interface, _bytecode } from '../compile.js';
 
 let accounts = null;
 let inbox;
